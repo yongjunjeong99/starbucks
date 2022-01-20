@@ -1,22 +1,3 @@
-// 헤더 부분 돋보기 및 통합검색 검색창 JS 코드
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function (){
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function (){
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchInputEl.addEventListener('blur', function (){
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
-
-
 // 오른쪽 뱃지 부분 하단으로 내려가면 사라지는 설정
 // 뱃지 선언
 const badgeEl = document.querySelector('header .badges');
@@ -163,9 +144,3 @@ spyEls.forEach(function (spyEl) {
   // setClassToggle 메소드는 클래스를 지정하여 제어하는 역할
   // addTo 메소드는 자바스크립트 라이브러리에 필요한 컨트롤러
 });
-
-
-// 올해의 몇년도인지 계산해서 보여주는 코드
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); // 올해의 숫자가 나오는 메소드
-
